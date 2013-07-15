@@ -23,7 +23,7 @@ print $q ->header;
 #
 #-----#-----#----------------------------------------------------#-----#-----#
 my $person_csv_list = "$ARGV[0]";                   #引数で受け取ったファイルを、代入する。
-#my $person_csv_list = "2013_0702_imabayashi.csv";  #引数で渡さずファイル名固定で行う場合
+#my $person_csv_list = "2013_0702.csv";  #引数で渡さずファイル名固定で行う場合
 my $server_csv_list = './access.lst';               #サーバIPリストファイル場所指定
 my $last_lines      = [];                           #最後に出力するための行のリファレンス
 my $date            = `date +%Y%m%d`;
@@ -34,7 +34,7 @@ my @server_array;
 #
 #-----#-----#----------------------------------------------------#-----#-----#
 #open (my $person_list,'<',"$ARGV[0]");
-open (my $person_list,'<',"2013_0702_imabayashi.csv");
+open (my $person_list,'<',"2013_0702.csv");
 open (my $server_list,'<','access.lst');
 
 # 03-オープンしたファイルを配列に代入。
